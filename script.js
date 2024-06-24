@@ -1,3 +1,5 @@
+humanScore = 0;
+computerScore = 0;
 function getComputerChoice(){
     const computer_choice = ['rock', 'paper', `scissors`];
     return computer_choice[Math.floor(Math.random() * computer_choice.length)]; 
