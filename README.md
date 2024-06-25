@@ -1,1 +1,2 @@
 # rock-paper-scissors-JavaScript
+This project is a simple Rock, Paper, Scissors game where the user plays against the computer. The game logic is implemented in JavaScript and the interaction happens entirely via the browser console. The game consists of 5 rounds, and at the end of the game, the overall winner is declared based on the scores.
