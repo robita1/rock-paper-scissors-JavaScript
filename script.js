@@ -18,12 +18,14 @@ function playRound(humanChoice, computerChoice){
 (humanChoice === 'scissors' && computerChoice === 'paper')
 ){
   console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+  humanScore++;
 }else if(
     (humanChoice === 'scissors' && computerChoice === 'rock') || 
     (humanChoice === 'paper' && computerChoice === 'scissors') ||
     (humanChoice === 'rock' && computerChoice === 'paper')
 ){
     console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+    computerScore++;
 }else{
     console.log("Please only choice rock, paper, or sicssors")
     }
