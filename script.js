@@ -16,7 +16,7 @@ function playGame(){
 function playRound(humanChoice, computerChoice){
     console.log(`Computer has picked: ${computerChoice}`);
     console.log(`User has picked: ${humanChoice}`);
-    
+
     if (humanChoice === computerChoice) {
         console.log("It's a draw!");
     }else if (
@@ -37,9 +37,11 @@ function playRound(humanChoice, computerChoice){
     console.log("Please only choice rock, paper, or sicssors")
     }
 }
+for(let i = 0; i < 5; i++){
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
+}
 }
 playGame();
