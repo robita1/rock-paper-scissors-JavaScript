@@ -12,7 +12,7 @@ function getHumanChoice(){
 function playGame(){
     humanScore = 0;
     computerScore = 0;
-    
+
 function playRound(humanChoice, computerChoice){
     if (humanChoice === computerChoice) {
         console.log("It's a draw!");
@@ -35,3 +35,9 @@ function playRound(humanChoice, computerChoice){
     }
 }
 }
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanChoice, computerChoice);
+
+playGame();
