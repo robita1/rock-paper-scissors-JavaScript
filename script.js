@@ -10,5 +10,21 @@ function getHumanChoice(){
     return user;
 }
 function playRound(humanChoice, computerChoice){
-    
+    if (humanChoice === computerChoice) {
+        console.log("It's a draw!");
+    }else if (
+(humanChoice === 'rock' && computerChoice === 'scissors') || 
+(humanChoice === 'paper' && computerChoice === 'rock') || 
+(humanChoice === 'scissors' && computerChoice === 'paper')
+){
+  console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+}else if(
+    (humanChoice === 'scissors' && computerChoice === 'rock') || 
+    (humanChoice === 'paper' && computerChoice === 'scissors') ||
+    (humanChoice === 'rock' && computerChoice === 'paper')
+){
+    console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+}else{
+    console.log("Please only choice rock, paper, or sicssors")
+    }
 }
