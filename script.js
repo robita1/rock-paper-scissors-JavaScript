@@ -14,6 +14,9 @@ function playGame(){
     computerScore = 0;
 
 function playRound(humanChoice, computerChoice){
+    console.log(`Computer has picked: ${computerChoice}`);
+    console.log(`User has picked: ${humanChoice}`);
+    
     if (humanChoice === computerChoice) {
         console.log("It's a draw!");
     }else if (
