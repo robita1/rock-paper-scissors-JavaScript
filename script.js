@@ -43,5 +43,7 @@ const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
 }
+        console.log(`humanScore: ${humanScore}`);
+        console.log(`computerScore: ${computerScore}`);
 }
 playGame();
