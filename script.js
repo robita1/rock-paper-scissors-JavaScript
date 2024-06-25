@@ -45,5 +45,12 @@ playRound(humanSelection, computerSelection);
 }
         console.log(`humanScore: ${humanScore}`);
         console.log(`computerScore: ${computerScore}`);
+if (humanScore > computerScore){
+    console.log("Game over! You are the final Winner!");
+}else if (humanScore < computerScore){
+    console.log(`Game over! Computer is the final Winner!`);
+}else{
+    console.log("Game over! It's a draw")
 }
+    }
 playGame();
