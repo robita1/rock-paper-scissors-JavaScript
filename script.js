@@ -34,10 +34,9 @@ function playRound(humanChoice, computerChoice){
     console.log("Please only choice rock, paper, or sicssors")
     }
 }
-}
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
-
+}
 playGame();
