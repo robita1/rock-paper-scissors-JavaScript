@@ -5,43 +5,48 @@ function getComputerChoice(){
 }
 
 function getHumanChoice(){
-    const user =  prompt("Pick your desired outcome:Rrock, Paper, or Scissors ? ").toLowerCase();
+    const user =  prompt("Pick your desired outcome:Rock, Paper, or Scissors ? ").toLowerCase();
     return user;
 }
 
 
-    humanScore = 0;
-    computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 
 function playRound(humanChoice, computerChoice){
-    console.log(`Computer has picked: ${computerChoice}`);
-    console.log(`User has picked: ${humanChoice}`);
+    let message ="";
+
+    const result = document.querySelector(".result");
+    result.innerHTML = message;
+
+    message += (`Computer has picked: ${computerChoice}`);
+    message += (`User has picked: ${humanChoice}`);
 
     if (humanChoice === computerChoice) {
-        console.log("It's a draw!");
+        message += ("It's a draw!");
     }else if (
 (humanChoice === 'rock' && computerChoice === 'scissors') || 
 (humanChoice === 'paper' && computerChoice === 'rock') || 
 (humanChoice === 'scissors' && computerChoice === 'paper')
 ){
-  console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+    message += (`You win! ${humanChoice} beats ${computerChoice}`);
   humanScore++;
 }else if(
     (humanChoice === 'scissors' && computerChoice === 'rock') || 
     (humanChoice === 'paper' && computerChoice === 'scissors') ||
     (humanChoice === 'rock' && computerChoice === 'paper')
 ){
-    console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+    message += (`You lose! ${computerChoice} beats ${humanChoice}`);
     computerScore++;
 }else{
-    console.log("Please only choice rock, paper, or sicssors")
+    message =("Please only choice rock, paper, or sicssors")
     }
 }
 const rockButton = document.querySelector(".rock");
-rockButton.addEventListener('click', () => {
+    rockButton.addEventListener('click', () => {
     playRound('rock', getComputerChoice());
 });
-const paperButton = document.querySelector(".paper")
+const paperButton = document.querySelector(".paper");
 paperButton.addEventListener('click', () => {
     playRound('paper', getComputerChoice());
 });
