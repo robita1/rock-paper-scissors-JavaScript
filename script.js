@@ -37,11 +37,15 @@ function playRound(humanChoice, computerChoice){
     console.log("Please only choice rock, paper, or sicssors")
     }
 }
-
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-playRound(humanSelection, computerSelection);
-
-        console.log(`humanScore: ${humanScore}`);
-        console.log(`computerScore: ${computerScore}`);
+const rockButton = document.querySelector(".rock");
+rockButton.addEventListener('click', () => {
+    playRound('rock', getComputerChoice());
+});
+const paperButton = document.querySelector(".paper")
+paperButton.addEventListener('click', () => {
+    playRound('paper', getComputerChoice());
+});
+const scissorsButton = document.querySelector(".scissors")
+scissorsButton.addEventListener('click', () => {
+    playRound('scissors', getComputerChoice());
+});
