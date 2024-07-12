@@ -43,12 +43,17 @@ function playRound(humanChoice, computerChoice){
     message +=(`humanScore: ${humanScore}, computerScore: ${computerScore}<br>`);
     if (humanScore === 5){
         message += 'User is the Winner';
+        resetScore();
     }else if(computerScore === 5){
         message += 'Computer is the Winner';
+        resetScore();
     }
     result.innerHTML = message;
 }
-
+function resetScore(){
+    humanScore = 0;
+    computerScore = 0;
+}
 const rockButton = document.querySelector(".rock");
     rockButton.addEventListener('click', () => {
     playRound('rock', getComputerChoice());
